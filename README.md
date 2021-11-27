@@ -39,8 +39,13 @@ DI QUERYCONTROLLER
 DI TEST.PY E APPLY.PY (Riga 59 e 46)
 -Cambiare di test.py e apply.py device=torch.device('cpu') a GPU
 
+Inserire nella cartella principale la cartella di biobert e i pesi salvati e cambiare nel file test.py e apply.py il percorso assoluto (Riga 59 e 60 per apply e riga 83 e 84 per test)
+
 Eseguire il server
 -php artisan serve
 
 A questo punto visitando il link ​ http://127.0.0.1:8000​ , troverete la pagina predefinita
 “welcome” del progetto
+
+Fare il login tramite le credenziali : "user@progetto.it"
+pw : "password"
