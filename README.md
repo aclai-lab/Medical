@@ -10,7 +10,7 @@ versione Composer 1.10.1
 Installazione 
 
 Installare Composer
--sudo apt-get install composer
+`sudo apt-get install composer`
 
 Installare Laravel
 -composer global require "laravel/installer"
