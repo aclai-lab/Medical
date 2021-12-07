@@ -13,11 +13,14 @@ Installare Composer
 `sudo apt-get install composer`
 
 Installare Laravel
--composer global require "laravel/installer"
+`composer global require "laravel/installer`
 
--Scaricare il progetto nella cartella di lavoro.
--Creare in mySQL il Database.
--Aprire il file .env (non .env.example) e inserire a riga uno (APP_NAME) il nome della applicazione e riga 12,13 e 14 (DB_DATABASE, DB_USERNAME, DB_PASSWORD) inserendo il nome del database appena creato, il nome e la password con la quale si accede a mySQL.
+Installion of mySQL-Server 
+`sudo apt install mysql-server`
+
+* Scaricare il progetto nella cartella di lavoro.
+* Creare in mySQL il Database.
+* Aprire il file .env (non .env.example) e inserire a riga uno (APP_NAME) il nome della applicazione e riga 12,13 e 14 (DB_DATABASE, DB_USERNAME, DB_PASSWORD) inserendo il nome del database appena creato, il nome e la password con la quale si accede a mySQL.
 
 
 Configurare il progetto
