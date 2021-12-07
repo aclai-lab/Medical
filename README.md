@@ -2,10 +2,10 @@
 
 versione dei linguaggi usati durante lo sviluppo
 
-versione PHP 7.4.3 (PHP > 7.2.5)
-versione Laravel 7.30.4
-versione mySQL 8.0.27
-versione Composer 1.10.1
+* versione PHP 7.4.3 (PHP > 7.2.5)
+* versione Laravel 7.30.4
+* versione mySQL 8.0.27
+* versione Composer 1.10.1
 
 Installazione 
 
