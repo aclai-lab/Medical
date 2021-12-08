@@ -1,54 +1,65 @@
 # MetAI
 
-versione dei linguaggi usati durante lo sviluppo
+Software versions
+* version of PHP 7.4.3 (PHP > 7.2.5)
+* version of Laravel 7.30.4
+* version of mySQL 8.0.27
+* version of Composer 1.10.1 
 
-* versione PHP 7.4.3 (PHP > 7.2.5)
-* versione Laravel 7.30.4
-* versione mySQL 8.0.27
-* versione Composer 1.10.1
-
-Installazione 
-
-Installare Composer
+Installation of Composer
 `sudo apt-get install composer`
 
-Installare Laravel
+Installation of Laravel
 `composer global require "laravel/installer`
 
-Installion of mySQL-Server 
-`sudo apt install mysql-server`
+Installation of mySQL-Server 
+* `sudo apt install mysql-server`
+* https://dev.mysql.com/downloads/workbench/ choose Ubuntu Linux and Ubuntu Linux 20.04 (x86, 64-bit), DEB Package
 
-* Scaricare il progetto nella cartella di lavoro.
-* Creare in mySQL il Database.
-* Aprire il file .env (non .env.example) e inserire a riga uno (APP_NAME) il nome della applicazione e riga 12,13 e 14 (DB_DATABASE, DB_USERNAME, DB_PASSWORD) inserendo il nome del database appena creato, il nome e la password con la quale si accede a mySQL.
+Creation of User for mySQL
+* `sudo mysql -u root -p`
+* `CREATE USER 'yourname'@'localhost' IDENTIFIED BY 'password';`
+* `GRANT ALL PRIVILEGES ON * . * TO 'yourname'@'localhost';`
+* `FLUSH PRIVILEGES;`
 
+Creation of a connection
+* Open mySQL workbench 
+* Click on the plus icon
+* Set Connection name 
+* Check that hostname and port are 127.0.0.1 and 3306
+* Enter the username you created earlier with the corresponding password
 
-Configurare il progetto
-Dalla cartella principale del progetto digitare questi commandi.
-php artisan key:generate
-php artisan config:cache
+Installion of PHP-mySQL
+`sudo apt-get install php-mysql`
+
+Configure the project
+* Download the project to your working folder.
+* Create on mySQL the Database (right click on schemas and select create new schema).
+* Open the file .env (not .env.example) and change to line one (APP_NAME) the name of the application and line 12,13 e 14 (DB_DATABASE, DB_USERNAME, DB_PASSWORD) by entering the name of the database just created, the name and the password with which you access mySQL.
+<br/>From the root folder.<br/>
+* `php artisan key:generate`
+* `php artisan config:cache`
 
 Database 
-Dalla cartella principale del progetto digitare questi commandi.
--php artisan migrate
--php artisan db:seed
+<br/>From the root folder.<br/>
+`php artisan migrate`
+`php artisan db:seed`
 
-Righe da cambiare all'interno del progetto (avevo inserito delle limitazioni per problemi di prestazioni))
-DI QUERYCONTROLLER
--Riga 370 $retmax mettere 10000
--Riga 1067 $retmax mettere 10000
--Riga 2102 rimuovere il "limit by 100" della query $result
+Parameters to change within the project.<br/>
+1. QUERYCONTROLLER
+- Line 370 $retmax change to 10000
+- Line 1067 $retmax change to 10000
+- Line 2102 remove the "limit by 100" from the query $result
 
-DI TEST.PY E APPLY.PY (Riga 59 e 46)
--Cambiare di test.py e apply.py device=torch.device('cpu') a GPU
+2. TEST.PY E APPLY.PY (Riga 59 e 46)
+- Change of test.py and apply.py device=torch.device('cpu') to GPU
+- Insert in the main folder the biobert folder and the saved_weights change in the file test.py and apply.py the absolute path (Line 59 e 60 for apply and line 83 and 84 for test)
 
-Inserire nella cartella principale la cartella di biobert e i pesi salvati e cambiare nel file test.py e apply.py il percorso assoluto (Riga 59 e 60 per apply e riga 83 e 84 per test)
+Execute the server
+`php artisan serve`
 
-Eseguire il server
--php artisan serve
+open a browser to go to the local page (127.0.0.1:8000) and log in
 
-A questo punto visitando il link ​ http://127.0.0.1:8000​ , troverete la pagina predefinita
-“welcome” del progetto
-
-Fare il login tramite le credenziali : "user@progetto.it"
-pw : "password"
+Login info
+* Username: `user@progetto.it`
+* password: `password`
