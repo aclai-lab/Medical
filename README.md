@@ -10,7 +10,7 @@ Installation of Composer
 `sudo apt-get install composer`
 
 Installation of Laravel
-`composer global require "laravel/installer`
+`composer global require laravel/installer`
 
 Installation of mySQL-Server 
 * `sudo apt install mysql-server`
