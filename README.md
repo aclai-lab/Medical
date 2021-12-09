@@ -42,8 +42,8 @@ Configure the project
 
 Database 
 <br/>From the root folder.<br/>
-`php artisan migrate`
-`php artisan db:seed`
+* `php artisan migrate`
+* `php artisan db:seed`
 
 Parameters to change within the project.<br/>
 1. QUERYCONTROLLER
