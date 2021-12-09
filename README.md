@@ -9,6 +9,9 @@ Software versions
 Installation of Composer
 `sudo apt-get install composer`
 
+Installation of Npm
+`sudo apt install npm`
+
 Installation of Laravel
 `composer global require laravel/installer`
 
@@ -31,6 +34,9 @@ Creation of a connection
 
 Installion of PHP-mySQL
 `sudo apt-get install php-mysql`
+
+Installion of Php-xml
+`sudo apt-get install php7.X-xml` (the x marks your php version check with `php --version`)
 
 Configure the project
 * Download the project to your working folder.
