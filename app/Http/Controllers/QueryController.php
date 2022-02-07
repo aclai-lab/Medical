@@ -1314,6 +1314,10 @@ class QueryController extends Controller
 
         //Title
         $title = $item->MedlineCitation->Article->ArticleTitle;
+
+        $title = str_replace('[','',$title);//clean string
+				
+		$title = str_replace(']','',$title);//clean string
         //  echo $item->MedlineCitation->Article->ArticleTitle ."<br />"; 
 
         $volume = $item->MedlineCitation->Article->Journal->JournalIssue->Volume;
@@ -1549,6 +1553,10 @@ class QueryController extends Controller
 
         //Title
         $title = $item->BookDocument->Book->BookTitle;
+
+        $title = str_replace('[','',$title);//clean string
+				
+		$title = str_replace(']','',$title);//clean string
         //  echo $item->MedlineCitation->Article->ArticleTitle ."<br />"; 
 
         $editor = $item->BookDocument->Book->Publisher->PublisherName;
